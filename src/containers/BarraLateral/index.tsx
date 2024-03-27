@@ -5,7 +5,7 @@ const BarraLateral = () => (
   <S.Aside>
     <div>
       <S.CampoBusca type="text" placeholder="Buscar" />
-      <Favoritos />
+      <Favoritos contador={0} />
     </div>
   </S.Aside>
 )

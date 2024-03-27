@@ -1,9 +1,13 @@
 import * as S from './styles'
 
-const Favoritos = () => (
+export type Props = {
+  contador: number
+}
+
+const Favoritos = ({ contador }: Props) => (
   <S.Card>
     <p>Favoritos:</p>
-    <S.Contador>3</S.Contador>
+    <S.Contador>{contador}</S.Contador>
   </S.Card>
 )
 

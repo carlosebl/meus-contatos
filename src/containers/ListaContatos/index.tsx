@@ -1,8 +1,14 @@
+import Contato from '../../components/Contato'
 import { Main } from './styles'
 
 const ListaContatos = () => (
   <Main>
-    <p>2 contatos marcados como favoritos</p>
+    <Contato />
+    <Contato />
+    <Contato />
+    <Contato />
+    <Contato />
+    <Contato />
   </Main>
 )
 
