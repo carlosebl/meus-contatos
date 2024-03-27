@@ -1,5 +1,14 @@
+import EstiloGlobal, { Container } from './styles'
+
 function App() {
-  return <div className="App"></div>
+  return (
+    <>
+      <EstiloGlobal />
+      <Container>
+        <h1>Hello!</h1>
+      </Container>
+    </>
+  )
 }
 
 export default App
