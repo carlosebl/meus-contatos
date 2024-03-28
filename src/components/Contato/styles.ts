@@ -24,11 +24,18 @@ export const Nome = styled.h3`
 export const Infos = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
 
   label {
     width: 80px;
-    margin-botom: 16px;
+    margin-bottom: 16px;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #f5f6fa;
+    margin-bottom: 16px;
   }
 
   textarea {
