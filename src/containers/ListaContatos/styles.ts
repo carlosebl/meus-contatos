@@ -1,10 +1,15 @@
 import { styled } from 'styled-components'
 
 export const Main = styled.main`
-  padding: 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 296px 296px;
-  gap: 32px;
+  padding: 32px 360px;
+  display: block;
   background-color: #f5f6fa;
+  height: 100vh;
+  overflow-y: scroll;
+
+  h1 {
+    margin-bottom: 32px;
+    text-align: center;
+    color: #192a56;
+  }
 `

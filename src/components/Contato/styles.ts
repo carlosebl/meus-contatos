@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 
 export const Contato = styled.div`
   padding: 16px;
+  margin-bottom: 24px;
   background-color: #718093;
   color: #f5f6fa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -19,9 +20,6 @@ export const BarraNome = styled.div`
 export const Nome = styled.h3`
   font-weight: bold;
   color: #273c75;
-`
-export const Icone = styled.span`
-  color: #c23616;
 `
 export const Infos = styled.div`
   display: flex;
@@ -59,4 +57,12 @@ export const Botao = styled.button`
   border: none;
   cursor: pointer;
   background-color: #353b48;
+`
+
+export const BotaoSalvar = styled(Botao)`
+  background-color: #44bd32;
+`
+
+export const BotaoCancelarRemover = styled(Botao)`
+  background-color: #c23616;
 `

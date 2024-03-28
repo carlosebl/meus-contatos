@@ -1,27 +1,47 @@
+import { useState } from 'react'
 import * as S from './styles'
 
-const Contato = () => (
-  <S.Contato>
-    <S.BarraNome>
-      <S.Nome>Nome do Contato</S.Nome>
-      <S.Icone>S2</S.Icone>
-    </S.BarraNome>
-    <S.Infos>
-      <label htmlFor="telefone">Telefone:</label>
-      <p>(00) 00000-0000</p>
-    </S.Infos>
-    <S.Infos>
-      <label htmlFor="email">E-mail:</label>
-      <p>user@email.com</p>
-    </S.Infos>
-    <S.Infos>
-      <textarea />
-    </S.Infos>
-    <S.BarraAcoes>
-      <S.Botao>Editar</S.Botao>
-      <S.Botao>Remover</S.Botao>
-    </S.BarraAcoes>
-  </S.Contato>
-)
+type Props = {
+  nome: string
+  descricao?: string
+}
+
+const Contato = ({ nome, descricao }: Props) => {
+  const [editando, setEditando] = useState(false)
+
+  return (
+    <S.Contato>
+      <S.BarraNome>
+        <S.Nome>{nome}</S.Nome>
+      </S.BarraNome>
+      <S.Infos>
+        <label htmlFor="telefone">Telefone:</label>
+        <input type="tel" />
+      </S.Infos>
+      <S.Infos>
+        <label htmlFor="email">E-mail:</label>
+        <input type="mail" />
+      </S.Infos>
+      <S.Infos>
+        <textarea value={descricao} />
+      </S.Infos>
+      <S.BarraAcoes>
+        {editando ? (
+          <>
+            <S.BotaoSalvar>Salvar</S.BotaoSalvar>
+            <S.BotaoCancelarRemover onClick={() => setEditando(false)}>
+              Cancelar
+            </S.BotaoCancelarRemover>
+          </>
+        ) : (
+          <>
+            <S.Botao onClick={() => setEditando(true)}>Editar</S.Botao>
+            <S.BotaoCancelarRemover>Remover</S.BotaoCancelarRemover>
+          </>
+        )}
+      </S.BarraAcoes>
+    </S.Contato>
+  )
+}
 
 export default Contato

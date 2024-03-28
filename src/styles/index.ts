@@ -6,11 +6,12 @@ const EstiloGlobal = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: Inter, sans-serif;
+        list-style: none;
     }
 `
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 240px auto;
+  grid-template-columns: 320px auto;
 `
 
 export default EstiloGlobal
