@@ -1,41 +1,51 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import Contato from '../../models/Contato'
 
+type ContatosState = {
+  itens: Contato[]
+}
+
+const initialState: ContatosState = {
+  itens: [
+    {
+      nome: 'Carlos Leite',
+      telefone: '(51) 98926-3072',
+      email: 'carlosebl@gmail.com',
+      descricao: 'Desenvolvedor Front-End',
+      id: 1
+    },
+    {
+      nome: 'João Silva',
+      telefone: '(11) 99732-4028',
+      email: 'joaosilva@gmail.com',
+      descricao: 'Desenvolvedor Back-End',
+      id: 2
+    },
+    {
+      nome: 'Maria Souza',
+      telefone: '(21) 93452-8720',
+      email: 'mariasouza@gmail.com',
+      descricao: 'Desenvolvedor Full-Stack',
+      id: 3
+    },
+    {
+      nome: 'José Santos',
+      telefone: '(61) 99328-1236',
+      email: 'josesantos@gmail.com',
+      descricao: 'Designer UX',
+      id: 4
+    }
+  ]
+}
+
 const contatosSlice = createSlice({
   name: 'contatos',
-  initialState: [
-    new Contato(
-      'Carlos Leite',
-      '(51) 98926-3072',
-      'carlosebl@gmail.com',
-      'Desenvolvedor Front-End',
-      1
-    ),
-    new Contato(
-      'João Silva',
-      '(11) 99732-4028',
-      'joaosilva@gmail.com',
-      'Desenvolvedor Back-End',
-      2
-    ),
-    new Contato(
-      'Maria Souza',
-      '(21) 93452-8720',
-      'mariasouza@gmail.com',
-      'Desenvolvedor Full-Stack',
-      3
-    ),
-    new Contato(
-      'José Santos',
-      '(61) 99328-1236',
-      'josesantos@gmail.com',
-      'Designer UX',
-      4
-    )
-  ],
+  initialState,
   reducers: {
     remover: (state, action: PayloadAction<number>) => {
-      state = state.filter((contato) => contato.id !== action.payload)
+      state.itens = state.itens.filter(
+        (contato) => contato.id !== action.payload
+      )
     }
   }
 })
