@@ -13,4 +13,15 @@ export const CampoBusca = styled.input`
   padding: 8px;
   color: #2f3640;
   border: 1px solid #2f3640;
+  margin-bottom: 40px;
+`
+
+export const BotaoVoltar = styled.button`
+  background-color: #353b48;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 40px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 `

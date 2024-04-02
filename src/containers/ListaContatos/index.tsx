@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import Contato from '../../components/Contato'
 import { RootReducer } from '../../store'
-import { Main } from './styles'
+import { Main } from '../../styles'
 
 const ListaContatos = () => {
   const { itens } = useSelector((state: RootReducer) => state.contatos)
